@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nade Gaming Center Tetovo - Restaurant Menu">
+    <title>Menu | Nade Gaming Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/N8CWckD.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="https://i.imgur.com/N8CWckD.png" alt="Nade Gaming Logo" class="logo">
+                <span class="brand-name">NADE GAMING CENTER</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#gaming">Gaming</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#entertainment">Entertainment</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Our Menu</h1>
+            <p class="hero-subtitle">Quality food and drinks to fuel your gaming sessions</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <div class="container">
+            <!-- Menu Filter -->
+            <div class="menu-filter" id="menuFilter">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="starters">Starters</button>
+                <button class="filter-btn" data-category="burgers">Burgers</button>
+                <button class="filter-btn" data-category="pizza">Pizza</button>
+                <button class="filter-btn" data-category="pasta">Pasta</button>
+                <button class="filter-btn" data-category="sandwiches">Sandwiches</button>
+                <button class="filter-btn" data-category="snacks">Snacks</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="hot-drinks">Hot Drinks</button>
+                <button class="filter-btn" data-category="cold-drinks">Cold Drinks</button>
+                <button class="filter-btn" data-category="energy-drinks">Energy Drinks</button>
+            </div>
+
+            <!-- Menu Grid (populated by JavaScript) -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://i.imgur.com/N8CWckD.png" alt="Nade Gaming Logo" class="footer-logo">
+                    <p class="footer-tagline">Where Champions Are Made</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#gaming">Gaming</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#entertainment">Entertainment</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                  <div class="social-icons">
+    <a href="https://facebook.com/nadegmng" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" height="25" width="25">
+    </a>
+    <a href="https://instagram.com/nadegmng" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" height="25" width="25">
+    </a>
+    <a href="https://twitter.com/nadegmng" target="_blank" aria-label="Twitter">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" height="25" width="25">
+    </a>
+    <a href="https://discord.com/users/nadegmng" target="_blank" aria-label="Discord">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/discord.svg" alt="Discord" height="25" width="25">
+    </a>
+</div>
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nade Gaming Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
