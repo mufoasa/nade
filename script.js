@@ -244,14 +244,17 @@ const menuItems = [
   },
 ]
 
-// Function to render menu items with Den currency
+// Function to render menu items
 function renderMenuItems(category = "all") {
   const menuGrid = document.getElementById("menuGrid")
+
+  if (!menuGrid) return
 
   // Filter items based on category
   const filteredItems = category === "all" ? menuItems : menuItems.filter((item) => item.category === category)
 
   // Generate HTML for menu items
+ // Generate HTML for menu items
   menuGrid.innerHTML = filteredItems
     .map(
       (item) => `
@@ -272,46 +275,55 @@ function renderMenuItems(category = "all") {
 
 // Menu filter functionality
 document.addEventListener("DOMContentLoaded", () => {
-  // Initial render of all menu items
-  renderMenuItems()
+  const menuGrid = document.getElementById("menuGrid")
+  if (menuGrid) {
+    // Initial render of all menu items
+    renderMenuItems()
 
-  // Menu filter buttons
-  const filterButtons = document.querySelectorAll(".filter-btn")
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove active class from all buttons
-      filterButtons.forEach((btn) => btn.classList.remove("active"))
-      // Add active class to clicked button
-      this.classList.add("active")
-      // Filter menu items
-      const category = this.getAttribute("data-category")
-      renderMenuItems(category)
+    // Menu filter buttons
+    const filterButtons = document.querySelectorAll(".filter-btn")
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Remove active class from all buttons
+        filterButtons.forEach((btn) => btn.classList.remove("active"))
+        // Add active class to clicked button
+        this.classList.add("active")
+        // Filter menu items
+        const category = this.getAttribute("data-category")
+        renderMenuItems(category)
+      })
     })
-  })
+  }
 
   // Mobile menu toggle
   const mobileMenuBtn = document.getElementById("mobileMenuBtn")
   const navMenu = document.getElementById("navMenu")
 
-  mobileMenuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active")
-  })
+  if (mobileMenuBtn && navMenu) {
+    mobileMenuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active")
+    })
+  }
 
   // Close mobile menu when clicking on a link
   const navLinks = document.querySelectorAll(".nav-menu a")
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      navMenu.classList.remove("active")
+      if (navMenu) {
+        navMenu.classList.remove("active")
+      }
     })
   })
 
   // Contact form submission
   const contactForm = document.getElementById("contactForm")
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-    alert("Thank you for your message! We will contact you soon.")
-    contactForm.reset()
-  })
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault()
+      alert("Thank you for your message! We will contact you soon.")
+      contactForm.reset()
+    })
+  }
 
   // Smooth scroll for navigation links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
