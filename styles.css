@@ -439,6 +439,97 @@ body {
   font-size: 0.9rem;
 }
 
+/* Added styles for featured items on homepage */
+.featured-items {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.featured-items .menu-item {
+  text-align: center;
+}
+
+.featured-items .menu-item h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.featured-items .menu-item p {
+  margin: 0.5rem 0;
+}
+
+.featured-items .price {
+  display: block;
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background-color: var(--orange);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.menu-item {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item-content {
+  padding: 1.5rem;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+  color: var(--charcoal);
+  font-size: 1.2rem;
+}
+
+.menu-price {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-item p {
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+}
+
 /* Entertainment Section */
 .entertainment {
   padding: 5rem 0;
@@ -872,4 +963,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
